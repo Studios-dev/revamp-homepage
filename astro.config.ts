@@ -15,6 +15,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    allowedHosts: ["7795a11a8395.ngrok-free.app"],
   },
   prefetch: {
     defaultStrategy: "viewport",
@@ -27,5 +28,5 @@ export default defineConfig({
 				cssVariable: "--font-inter",
 			},
 		],
-	},
+	}
 });
