@@ -1,5 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseHead from "../components/BaseHead.astro";
 interface Props {
   title: string;
   description: string;
@@ -12,7 +12,7 @@ const { title, description } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body>
+  <body class="bg-white dark:bg-theme-dark dark min-h-screen flex flex-col">
     <slot />
   </body>
 </html>

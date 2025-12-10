@@ -10,3 +10,9 @@
 		@apply cursor-pointer;
 	}
 }
+
+@theme {
+	--color-theme-dark: oklch(0.2254 0.0015 197.05)
+}
+
+@custom-variant dark (&:where(.dark, .dark *));

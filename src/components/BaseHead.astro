@@ -70,3 +70,14 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<script is:inline>
+  document.documentElement.classList.toggle(
+    "dark",
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+</script>
+
+<link rel="preload" href="/logo.svg" as="image">
